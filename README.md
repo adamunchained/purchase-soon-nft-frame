@@ -1,4 +1,4 @@
-Frame to purchase SOON token
+Frame to purchase NFT on Soonaverse
 
 ```
 npm install
