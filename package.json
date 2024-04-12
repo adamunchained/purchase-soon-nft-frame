@@ -1,0 +1,23 @@
+{
+  "name": "build-claim-frame",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "frog dev",
+    "prettier": "npx prettier --write ./src",
+    "wrangler:dev": "wrangler dev src/index.tsx",
+    "deploy": "wrangler deploy --minify src/index.tsx",
+    "wrangler:static": "cp -r ./node_modules/frog/_lib/ui/.frog ./public/frog"
+  },
+  "dependencies": {
+    "@build-5/sdk": "^2.2.21",
+    "@neynar/nodejs-sdk": "^1.14.0",
+    "frog": "latest",
+    "hono": "^4",
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "wrangler": "^3.44.0"
+  }
+}
