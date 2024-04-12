@@ -39,7 +39,7 @@ export const landingFrame = async (c: any) => {
               whiteSpace: 'pre-wrap',
             }}
           >
-            {'NFT not available for sale! Only onchain NFTs supported.'}
+            {'Onchain NFT not available for sale anymore!'}
           </div>
         </div>
       ),
@@ -47,28 +47,11 @@ export const landingFrame = async (c: any) => {
   }
 
   return c.res({
-    image: (
-      <div
-        style={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#f0f0f0',
-          fontSize: 32,
-          fontWeight: 600,
-        }}
-      >
-        <img height="700" width="700" src={nft.media}></img>
-        {/* <div style={{ marginTop: 40 }}>Price {nft.price / 1000 / 1000} {nft.mintingData?.network?.toUpperCase()}</div> */}
-      </div>
-    ),
+    image: nft.media,
     intents: [
-      <Button.Link href={'http://localhost:5173/deep-link/' + nft.uid}>
+      <Button.Link href={'http://soon-purchase-nft-v1.buildcore.io/deep-link/' + nft.uid}>
         {'Purchase for ' +
-          (nft.availablePrice || 0) / 1000 / 1000 +
+          ((nft.availablePrice || 0) / 1000 / 1000).toLocaleString() +
           ' ' +
           nft.mintingData?.network?.toUpperCase()}
       </Button.Link>,

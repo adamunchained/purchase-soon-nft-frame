@@ -10,14 +10,15 @@
     "wrangler:static": "cp -r ./node_modules/frog/_lib/ui/.frog ./public/frog"
   },
   "dependencies": {
-    "@build-5/sdk": "^2.2.21",
-    "@neynar/nodejs-sdk": "^1.14.0",
+    "@build-5/sdk": "2.2.23",
+    "@build-5/interfaces": "2.2.23",
+    "@neynar/nodejs-sdk": "1.14.0",
     "frog": "latest",
-    "hono": "^4",
-    "prettier": "^3.2.5"
+    "hono": "4",
+    "prettier": "3.2.5"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "latest",
-    "wrangler": "^3.44.0"
+    "wrangler": "3.44.0"
   }
 }
