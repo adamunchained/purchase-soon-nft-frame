@@ -1,4 +1,4 @@
-Frame to claim BUILD token.
+Frame to purchase SOON token
 
 ```
 npm install
